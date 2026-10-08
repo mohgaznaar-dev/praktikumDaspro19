@@ -32,6 +32,28 @@ public class studikasus2no19 {
                 System.out.println("Status: Bukan juara 1, 2, atau 3. "
                         + "Dana penghargaan tidak diberikan.");
             }
-    }
+        } else if (kegiatan.equalsIgnoreCase("PKM")) {
+
+            System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos) : ");
+            pkm = sc.nextInt();
+
+            if (pkm == 1) {
+                if (dokumen == 4) {
+                    System.out.println("Status: Dana penghargaan diberikan.");
+                } else {
+                    System.out.println("Status: Dokumen tidak lengkap . "
+                            + "Dana penghargaan tidak diberikan.");
+                    System.out.println("Dokumen masih kurang: " + (4 - dokumen));
+                }
+            } else {
+                System.out.println("Status: PKM tidak lolos pendanaan. "
+                        + "Dana penghargaan tidak diberikan.");
+            }
+
+        } else {
+            System.out.println("Status: Kegiatan lainnya. "
+                    + "Dana penghargaan tidak diberikan.");
+        }
+
 }
 }
